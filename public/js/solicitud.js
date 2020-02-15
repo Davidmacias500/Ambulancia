@@ -1,5 +1,6 @@
 var route = document.querySelector("[name=route]").value;
 var urlSoli= route + '/apiSolicitud';
+var urlDest= route + '/apiDestino';
 new Vue({
 	http:{
      	headers:{
@@ -9,15 +10,18 @@ new Vue({
 	el:'#solicitudes',
 	created:function(){
 		this.getSolicitudes();
+		this.getDestinos();
 	},
 	data:{
 		buscar:'',
 		solicitudes:[],
+		destinos:[],
 		id_solicitud:'',
 		fecha_solicitud:'',
 		hora_solicitud:'',
 		fecha_uso:'',
 		hora_uso:'',
+		id_destino:'',
 		estatus_solicitud:'',
 		curp:'',
 		saludo:'HOLA',
@@ -39,6 +43,16 @@ new Vue({
 				console.log(response);
 			});
 		},
+		getDestinos:function()
+		{
+			this.$http.get(urlDest).then(function(response)
+			{
+				this.destinos=response.data;
+			}
+			).catch(function(response){
+				console.log(response);
+			});
+		},
 
 		agregarSolicitud:function(){
 			//construyendo un objeto de tipo js para enviar ala Api.
@@ -48,6 +62,7 @@ new Vue({
 						 hora_solicitud:this.hora_solicitud,
 						 fecha_uso:this.fecha_uso,
 						 hora_uso:this.hora_uso,
+						 id_destino:this.id_destino,
 						 estatus_solicitud:this.estatus_solicitud,
 						 curp:this.curp}
 			 console.log(solicitudes);
@@ -70,6 +85,7 @@ new Vue({
 				this.hora_solicitud = response.data.hora_solicitud
 				this.fecha_uso = response.data.fecha_uso
 				this.hora_uso = response.data.hora_uso
+				this.id_destino = response.data.id_destino
 				this.estatus_solicitud = response.data.estatus_solicitud
 				this.curp= response.data.curp
 				$('#datos').modal('show');
@@ -83,6 +99,7 @@ new Vue({
 						 hora_solicitud:this.hora_solicitud,
 						 fecha_uso:this.fecha_uso,
 						 hora_uso:this.hora_uso,
+						 id_destino:this.id_destino,
 						 estatus_solicitud:this.estatus_solicitud,
 						 curp:this.curp
 						};
@@ -96,6 +113,7 @@ new Vue({
 			this.hora_solicitud='';
 			this.fecha_uso='';
 			this.hora_uso='';
+			this.id_destino='';
 			this.estatus_solicitud='';
 			this.curp='';
 			});
@@ -120,6 +138,7 @@ new Vue({
 				this.hora_solicitud='';
 				this.fecha_uso='';
 				this.hora_uso='';
+				this.id_destino='';
 				this.estatus_solicitud='';
 				this.curp='';
 		},
