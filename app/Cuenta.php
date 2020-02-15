@@ -17,7 +17,6 @@ class Cuenta extends Model
     	'apellidop',
         'apellidom',
         'celular',
-        'direccion',
         'usuario',
         'password',
         'rol',
