@@ -11,7 +11,7 @@ class Solicitud extends Model
     protected $primaryKey='id_solicitud';
     protected $with=['usuario','destino'];
 
-    public $timestamps=true;
+    public $timestamps=false;
     public $incrementing=true;
 
     public $fillable=[
