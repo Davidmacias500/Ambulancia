@@ -22,6 +22,7 @@
 					<th>Hora de solicitud</th>
 					<th>Fecha de uso</th>
 					<th>Hora de uso</th>
+					<th>Destino</th>
 					<th>Estatus de solicitud</th>
 					<th>Curp</th>				
 					<th>Editar</th>
@@ -33,6 +34,7 @@
 						<td>@{{soli.hora_solicitud}}</td>
 						<td>@{{soli.fecha_uso}}</td>
 						<td>@{{soli.hora_uso}}</td>
+						<td>@{{soli.destino.nombre}}</td>
 						<td>@{{soli.estatus_solicitud}}</td>
 						<td>@{{soli.curp}}</td>
 						<td>
@@ -59,6 +61,12 @@
                 <input type="time" placeholder="Hora de solicitud" v-model="hora_solicitud" class="form-control">
                 <input type="date" placeholder="Fecha de uso" v-model="fecha_uso" class="form-control">
                 <input type="time" placeholder="Hora de uso" v-model="hora_uso" class="form-control">
+
+                <select class="form-control" v-model="id_destino">
+                  <option disabled="Seleccione una opcion"></option>
+                  <option v-for="d in destinos" v-bind:value="d.id_destino">@{{d.nombre}}</option>
+                </select >
+
                 <input type="number" placeholder="Estatus" v-model="estatus_solicitud" class="form-control">
                 <input type="text" placeholder="Curp" v-model="curp" class="form-control" maxlength="18">
               </div>
