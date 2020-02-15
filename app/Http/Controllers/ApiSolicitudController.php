@@ -34,6 +34,7 @@ class ApiSolicitudController extends Controller
         $solicitud->hora_solicitud=$request->get('hora_solicitud');
         $solicitud->fecha_uso=$request->get('fecha_uso');
         $solicitud->hora_uso=$request->get('hora_uso');
+        $solicitud->id_destino=$request->get('id_destino');
         $solicitud->estatus_solicitud=$request->get('estatus_solicitud'); 
         $solicitud->curp=$request->get('curp');
         $solicitud->save();
@@ -66,6 +67,7 @@ class ApiSolicitudController extends Controller
         $solicitud->hora_solicitud=$request->get('hora_solicitud');
         $solicitud->fecha_uso=$request->get('fecha_uso');
         $solicitud->hora_uso=$request->get('hora_uso');
+        $solicitud->id_destino=$request->get('id_destino');
         $solicitud->estatus_solicitud=$request->get('estatus_solicitud');
         $solicitud->curp=$request->get('curp');
         $solicitud->update();
