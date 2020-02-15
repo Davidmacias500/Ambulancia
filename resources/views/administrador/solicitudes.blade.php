@@ -10,14 +10,14 @@
 				    <div class="col-md-12">
                   	<label>Buscar: </label><br><input type="text" placeholder="Escriba el curp del solicitante a buscar" v-model="buscar" value="buscar">
                   	</div>
-					<button class="btn btn-success fa fa-copy" v-on:click="showModal()"
+					<button class="btn btn-success fa fa-clipboard-list" v-on:click="showModal()"
 					> Nueva solicitud</button>
 					<br>
 					<p></p>
 					<p></p>
 					<table class="table table-bordered">
 				<thead>
-					<th>#</th>
+					<th>Id</th>
 					<th>Fecha de solicitud</th>
 					<th>Hora de solicitud</th>
 					<th>Fecha de uso</th>
