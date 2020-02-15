@@ -18,6 +18,7 @@ new Vue({
 		apellidop:'',
 		apellidom:'',
 		celular:'',
+		direccion:'',
 		usuario:'',
 		password:'',
 		rol:'',
@@ -49,6 +50,7 @@ new Vue({
 						 apellidop:this.apellidop,
 						 apellidom:this.apellidom,
 						 celular:this.celular,
+						 direccion:this.direccion,
 						 usuario:this.usuario,
 						 password:this.password,
 						 rol:this.rol
@@ -73,6 +75,7 @@ new Vue({
 				this.apellidop= response.data.apellidop
 				this.apellidom=response.data.apellidom
 				this.celular = response.data.celular
+				this.direccion = response.data.direccion
 				this.usuario = response.data.usuario
 				this.password = response.data.password
 				this.rol = response.data.rol
@@ -87,6 +90,7 @@ new Vue({
 						 apellidop:this.apellidop,
 						 apellidom:this.apellidom,
 						 celular:this.celular,
+						 direccion:this.direccion,
 						 usuario:this.usuario,
 						 password:this.password,
 						 rol:this.rol
@@ -103,6 +107,7 @@ new Vue({
 			this.apellidop='';
 			this.apellidom='';
 			this.celular='';
+			this.direccion='';
 			this.usuario='';
 			this.password='';
 			this.rol='';
@@ -127,6 +132,7 @@ new Vue({
 			this.apellidop='';
 			this.apellidom='';
 			this.celular='';
+			this.direccion='';
 			this.usuario='';
 			this.password='';
 			this.rol='';

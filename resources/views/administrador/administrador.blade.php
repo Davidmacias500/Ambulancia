@@ -20,6 +20,7 @@
           <th>Apellido Paterno</th>
           <th>Apellido Materno</th>
 					<th>Celular</th>
+          <th>Dirección</th>
 					<th>Usuario</th>
           <th>Password</th>								
           <th>Rol</th>
@@ -32,6 +33,7 @@
             <td>@{{c.apellidop}}</td>
             <td>@{{c.apellidom}}</td>
 						<td>@{{c.celular}}</td>
+            <td>@{{c.direccion}}</td>
 						<td>@{{c.usuario}}</td>
             <td>@{{c.password}}</td>
             <td>@{{c.rol}}</td>
