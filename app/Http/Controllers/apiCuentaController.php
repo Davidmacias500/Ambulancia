@@ -32,6 +32,7 @@ class apiCuentaController extends Controller
         $cuenta->apellidop=$request->get('apellidop');
         $cuenta->apellidom=$request->get('apellidom');
         $cuenta->celular=$request->get('celular'); 
+        $cuenta->direccion=$request->get('direccion'); 
         $cuenta->usuario=$request->get('usuario');
         $cuenta->password=$request->get('password');
         $cuenta->rol=$request->get('rol'); 
@@ -65,7 +66,8 @@ class apiCuentaController extends Controller
         $cuenta->nombre=$request->get('nombre');
         $cuenta->apellidop=$request->get('apellidop');
         $cuenta->apellidom=$request->get('apellidom');
-        $cuenta->celular=$request->get('celular'); 
+        $cuenta->celular=$request->get('celular');
+        $cuenta->direccion=$request->get('direccion');  
         $cuenta->usuario=$request->get('usuario');
         $cuenta->password=$request->get('password');
         $cuenta->rol=$request->get('rol'); 
