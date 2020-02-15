@@ -79,7 +79,7 @@
             </a>
           <li class="nav-item">
             <a href="solicitudes" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-clipboard-list"></i>
               <p>
                 Solicitudes
               </p>
