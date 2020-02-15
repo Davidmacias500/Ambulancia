@@ -59,6 +59,7 @@
                 <input type="text" placeholder="Apellido Paterno" v-model="apellidop" class="form-control">
                 <input type="text" placeholder="Apellido Materno" v-model="apellidom" class="form-control">
                 <input type="text" placeholder="Celular" v-model="celular" class="form-control" maxlength="10">
+                <input type="text" placeholder="Dirección" v-model="direccion" class="form-control">
                 <input type="text" placeholder="Usuario" v-model="usuario" class="form-control">
                 <input type="text" placeholder="Contraseña" v-model="password" class="form-control">
                 <input type="text" placeholder="Rol" v-model="rol" class="form-control" maxlength="20">
