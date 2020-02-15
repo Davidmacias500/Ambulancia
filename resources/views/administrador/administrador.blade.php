@@ -69,7 +69,6 @@
                 <button type="submit" class="btn btn-success" v-on:click="actualizarCuenta()" v-if="editar">Actualizar</button>
                 <button type="submit" class="btn btn-success" v-on:click="agregarCuenta()" v-if="!editar">Guardar</button>
                 <!-- <button type="submit" class="btn btn-success" @click="salir">Cancelar</button> -->
-
               </div>
             </div>
           </div>
